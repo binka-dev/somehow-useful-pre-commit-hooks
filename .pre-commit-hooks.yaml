@@ -1,0 +1,6 @@
+- id: python-requirements-version-mandatory
+  name: Mandatory requirements.txt version specification
+  description: Fails if a requirement does not specify the version
+  language: pygrep
+  files: requirements.*\.txt$
+  entry: ^(?!.+(?:={2,3}|!=|~=|>=?|<=?)[\S]+).*
